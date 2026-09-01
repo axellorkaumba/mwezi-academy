@@ -1,5 +1,6 @@
 "use server";
 
+import { checkBotId } from "botid/server";
 import type { EnterpriseLeadState } from "@/lib/enterprise-lead";
 
 const REQUIRED_FIELDS = ["company", "contactName", "email", "teamSize", "objective"] as const;
@@ -8,6 +9,12 @@ export async function submitEnterpriseLead(
   _prevState: EnterpriseLeadState,
   formData: FormData
 ): Promise<EnterpriseLeadState> {
+  const verification = await checkBotId();
+  if (verification.isBot) {
+    // Silent no-op: don't give bots a signal that they were detected.
+    return { status: "error", errors: {} };
+  }
+
   const values = Object.fromEntries(formData) as Record<string, string>;
 
   const errors: Record<string, string> = {};
