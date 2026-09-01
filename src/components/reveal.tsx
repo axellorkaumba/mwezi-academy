@@ -20,7 +20,10 @@ export function Reveal({
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -31,7 +34,13 @@ export function Reveal({
       { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    // Safety net: never leave content permanently invisible if the
+    // observer fails to fire for any reason.
+    const fallback = setTimeout(() => setVisible(true), 2000);
+    return () => {
+      obs.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (
