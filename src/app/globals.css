@@ -65,3 +65,123 @@ h1, h2, h3, h4 {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+.reveal--from-up { transform: translateY(20px); }
+.reveal--from-left { transform: translateX(-28px); }
+.reveal--from-right { transform: translateX(28px); }
+.reveal--visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ---------- Underline draw-in (paired with .reveal--visible on an ancestor) ---------- */
+.underline-draw { position: relative; display: inline-block; }
+.underline-draw::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  background: var(--ember);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+.reveal--visible .underline-draw::after { width: 100%; }
+
+/* ---------- Hero title line reveal ---------- */
+.hero-line-mask {
+  display: block;
+  overflow: hidden;
+}
+.hero-line {
+  display: block;
+  animation: hero-line-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes hero-line-in {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ---------- Typewriter cursor ---------- */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: -0.1em;
+  animation: caret-blink 0.9s steps(1) infinite;
+}
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ---------- Category index number glow on hover ---------- */
+.index-glow {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.group:hover .index-glow {
+  color: var(--ember-strong);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--ember) 55%, transparent);
+}
+
+/* ---------- Spotlight hover card ---------- */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(160px circle at var(--spot-x, 50%) var(--spot-y, 50%), color-mix(in srgb, var(--ember) 12%, transparent), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Marquee (proof pills) ---------- */
+.marquee-track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+/* ---------- Ember halo breathing (hero + final CTA) ---------- */
+.ember-halo {
+  animation: halo-breathe 7s ease-in-out infinite;
+}
+@keyframes halo-breathe {
+  0%, 100% { opacity: 0.14; }
+  50% { opacity: 0.24; }
+}
+
+/* ---------- CTA glow (final CTA + hero) ---------- */
+.glow-cta {
+  transition: box-shadow 0.35s ease, transform 0.2s ease;
+}
+.glow-cta:hover {
+  box-shadow: 0 0 0 1px var(--ember), 0 8px 28px -6px color-mix(in srgb, var(--ember) 60%, transparent);
+}
