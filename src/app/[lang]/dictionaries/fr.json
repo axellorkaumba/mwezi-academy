@@ -1,0 +1,685 @@
+{
+  "meta": {
+    "title": "Mwezi Academy — Marketing, digital et IA, appris en pratiquant",
+    "description": "Formations professionnelles en marketing, digital, intelligence artificielle et compétences numériques, pensées pour l'Afrique francophone. On ne théorise pas. On forge."
+  },
+  "nav": {
+    "formations": "Formations",
+    "entreprises": "Entreprises",
+    "universites": "Universités",
+    "formateurs": "Formateurs",
+    "ressources": "Ressources",
+    "apropos": "À propos",
+    "cta": "Explorer les formations"
+  },
+  "hero": {
+    "eyebrow": "Formation professionnelle — Marketing · Digital · IA",
+    "title": "On ne théorise pas.\nOn forge.",
+    "subtitle": "Marketing, digital, intelligence artificielle et compétences numériques — pour les entrepreneurs, professionnels, étudiants et entreprises d'Afrique francophone. Pensé d'abord pour la RDC, ouvert sur le monde.",
+    "ctaPrimary": "Explorer les formations",
+    "ctaSecondary": "Former mon équipe",
+    "stats": [
+      { "value": "6", "label": "familles de formation" },
+      { "value": "3", "label": "niveaux, du débutant au pro" },
+      { "value": "9$", "label": "prix d'entrée" },
+      { "value": "2", "label": "langues, FR & EN" }
+    ]
+  },
+  "categories": {
+    "eyebrow": "Catalogue",
+    "title": "Six familles de compétences, pas un fourre-tout",
+    "subtitle": "Chaque formation répond à une seule question : qu'est-ce que vous saurez réellement faire à la fin ?",
+    "items": [
+      { "name": "Marketing", "desc": "Stratégie, acquisition, SEO, Meta & Google Ads, email marketing, tunnel de conversion." },
+      { "name": "Branding", "desc": "Positionnement, identité visuelle, storytelling, personal branding." },
+      { "name": "Création de contenu", "desc": "Canva, montage vidéo, photo produit, identité visuelle DIY, site sans code." },
+      { "name": "Intelligence artificielle", "desc": "Claude, ChatGPT, automatisation, agents IA — sur des cas d'usage réels." },
+      { "name": "Développement", "desc": "AI-assisted coding, APIs, automatisation, SaaS assisté par IA." },
+      { "name": "Entrepreneuriat", "desc": "Créer son offre, trouver ses premiers clients, pricing, vendre en ligne." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi Mwezi Academy",
+    "title": "Accessible. Premium. Pratique. Africain et international.",
+    "items": [
+      { "name": "Accessible", "desc": "Prix en USD pensés pour le pouvoir d'achat congolais, paiement mobile money, contenus légers en données." },
+      { "name": "Premium", "desc": "Une exigence de direction artistique et de pédagogie digne d'un produit tech international." },
+      { "name": "Pratique", "desc": "Chaque formation se teste avec une seule question : qu'est-ce que l'étudiant sait faire à la fin ?" },
+      { "name": "Africain & international", "desc": "Racines congolaises assumées, ouverture immédiate vers l'Afrique francophone puis le monde." }
+    ]
+  },
+  "ai": {
+    "eyebrow": "Le pilier le plus demandé",
+    "title": "L'IA, apprise sur de vrais cas d'usage",
+    "subtitle": "Pas une visite guidée des fonctionnalités : des workflows que vous rejouez le lendemain, sur votre propre activité.",
+    "items": [
+      "Claude & ChatGPT pour entrepreneurs",
+      "Automatiser son entreprise avec l'IA",
+      "Construire des agents et des workflows IA",
+      "IA pour le marketing et la création de contenu",
+      "Automatiser le service client et les emails",
+      "Utiliser MCP et les outils connectés"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Pour qui",
+    "title": "Une académie, quatre publics",
+    "items": [
+      { "name": "Entrepreneurs", "desc": "Vendre, se faire connaître, utiliser l'IA sans équipe technique.", "cta": "Voir les formations" },
+      { "name": "Développeurs", "desc": "Intégrer l'IA dans votre pratique, coder assisté, automatiser.", "cta": "Voir les formations" },
+      { "name": "Entreprises", "desc": "Former vos équipes aux compétences qui comptent vraiment.", "cta": "Former mon équipe" },
+      { "name": "Universités", "desc": "Rendre vos étudiants opérationnels avant le diplôme.", "cta": "Demander un partenariat" }
+    ]
+  },
+  "proof": {
+    "eyebrow": "Des projets réels. Des compétences réelles.",
+    "title": "Ce qu'on enseigne, on l'a fait.",
+    "subtitle": "Une sélection de marques et de projets réellement accompagnés par les fondateurs, avant même le premier cours.",
+    "items": ["Mwezi Partners", "Digitatix", "Generation Collection", "Maison Arvela", "Safari Vizuri", "Reed Signature", "Elief Agency"]
+  },
+  "team": {
+    "eyebrow": "Formateurs",
+    "title": "Deux frères. Stratégie et exécution.",
+    "members": [
+      {
+        "name": "Axel L'Or Katshiza Kaumba",
+        "role": "Growth & Brand Strategist",
+        "bio": "Marketing digital, branding et acquisition — Groupe Stabel, Havas Edge, Zed Conseil, et fondateur de Mwezi Partners."
+      },
+      {
+        "name": "Ruddy Kakoma Kaumba",
+        "role": "Consultant Marketing & Communication Digitale",
+        "bio": "Technique, contenu vidéo et sites web — Sofitel Agadir, Custplace, et consultant indépendant depuis 2023."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "title": "Prêt à passer à la pratique ?",
+    "subtitle": "Choisissez une formation, ou parlons de votre équipe.",
+    "ctaPrimary": "Explorer les formations",
+    "ctaSecondary": "Parler à un conseiller"
+  },
+  "catalog": {
+    "eyebrow": "Catalogue",
+    "title": "Toutes nos formations",
+    "subtitle": "Filtrez par catégorie, niveau, format ou prix — chaque fiche indique clairement ce que vous saurez faire à la fin.",
+    "searchPlaceholder": "Rechercher une formation…",
+    "allCategories": "Toutes les catégories",
+    "allLevels": "Tous les niveaux",
+    "allFormats": "Tous les formats",
+    "allPrices": "Tous les prix",
+    "levels": { "debutant": "Débutant", "intermediaire": "Intermédiaire", "avance": "Avancé" },
+    "levelHint": {
+      "debutant": "Je pars de zéro.",
+      "intermediaire": "Je connais les bases, je veux devenir opérationnel.",
+      "avance": "Je veux utiliser ces compétences professionnellement."
+    },
+    "formats": {
+      "mini": "Mini-cours",
+      "formation": "Formation",
+      "bootcamp": "Bootcamp",
+      "masterclass": "Masterclass",
+      "programme": "Programme"
+    },
+    "priceRanges": {
+      "sous20": "Moins de $20",
+      "20a50": "$20 – $50",
+      "50a100": "$50 – $100",
+      "plus100": "$100 et plus"
+    },
+    "resultCount_one": "{count} formation",
+    "resultCount_other": "{count} formations",
+    "noResults": "Aucune formation ne correspond à ces filtres — essayez d'en retirer un.",
+    "resetFilters": "Réinitialiser les filtres",
+    "modules_one": "{count} module",
+    "modules_other": "{count} modules",
+    "cta": "Voir le programme",
+    "by": "Par"
+  },
+  "course": {
+    "backToCatalog": "← Retour au catalogue",
+    "learn": "Ce que vous allez apprendre",
+    "forWho": "Pour qui",
+    "outcomes": "Ce que vous saurez faire",
+    "program": "Programme",
+    "project": "Projet pratique",
+    "resources": "Ressources incluses",
+    "instructor": "Formateur",
+    "faq": "Questions fréquentes",
+    "readyTitle": "Vous êtes prêt ?",
+    "readySubtitle": "Rejoignez la formation et commencez dès aujourd'hui.",
+    "enroll": "S'inscrire — ",
+    "stickyEnroll": "S'inscrire",
+    "notFoundTitle": "Formation introuvable",
+    "notFoundBody": "Cette formation n'existe pas ou plus. Retournez au catalogue pour en découvrir d'autres.",
+    "modulesLabel": "modules"
+  },
+  "enterprise": {
+    "eyebrow": "Entreprises",
+    "title": "Formez vos équipes aux compétences qui comptent vraiment.",
+    "subtitle": "Marketing, IA, productivité, automatisation — des programmes sur mesure, pilotés par des praticiens, pas par un catalogue générique.",
+    "ctaPrimary": "Demander un programme",
+    "ctaSecondary": "Voir les thématiques",
+    "why": {
+      "title": "Pourquoi former vos équipes avec Mwezi Academy",
+      "items": [
+        { "name": "Sur mesure", "desc": "Le programme part de vos objectifs réels, pas d'un module standard qu'on recase." },
+        { "name": "Praticiens", "desc": "Formé par des consultants qui ont mené ces projets, pas seulement enseigné la théorie." },
+        { "name": "Flexible", "desc": "Présentiel à Kinshasa, à distance, ou hybride — selon la disponibilité de votre équipe." },
+        { "name": "Mesurable", "desc": "Chaque programme se termine par un livrable concret sur un cas réel de votre entreprise." }
+      ]
+    },
+    "formats": {
+      "title": "Trois formats, un seul objectif : l'opérationnel",
+      "items": [
+        { "name": "Workshop thématique", "duration": "Demi-journée à 1 jour", "desc": "Un sujet précis, traité à fond, avec un livrable à la fin de la session." },
+        { "name": "Programme sur mesure", "duration": "1 à 5 jours", "desc": "Un parcours construit à partir d'un audit de vos besoins réels." },
+        { "name": "Formation continue", "duration": "Abonnement mensuel", "desc": "Un rythme régulier de montée en compétence pour toute une équipe." }
+      ]
+    },
+    "topics": {
+      "title": "Thématiques les plus demandées",
+      "items": [
+        "IA pour les équipes marketing",
+        "ChatGPT & Claude en entreprise",
+        "Productivité et automatisation",
+        "Marketing digital",
+        "Vente et prospection",
+        "Communication et branding",
+        "Stratégie digitale",
+        "Création de contenu (Canva, vidéo, photo)"
+      ]
+    },
+    "process": {
+      "title": "Comment ça se passe",
+      "steps": [
+        { "name": "Audit", "desc": "Un échange rapide pour comprendre votre objectif, votre équipe et vos contraintes." },
+        { "name": "Proposition", "desc": "Un programme sur mesure, avec contenu, durée et budget clairs." },
+        { "name": "Session", "desc": "En présentiel à Kinshasa, à distance, ou hybride." },
+        { "name": "Suivi", "desc": "Ressources, replay et un point de suivi après la formation." }
+      ]
+    },
+    "form": {
+      "title": "Demander un programme",
+      "subtitle": "Décrivez votre besoin, on revient vers vous sous 48h ouvrées.",
+      "company": "Nom de l'entreprise",
+      "contactName": "Votre nom",
+      "email": "Email professionnel",
+      "teamSize": "Taille de l'équipe à former",
+      "teamSizeOptions": ["1 à 5 personnes", "6 à 15 personnes", "16 à 50 personnes", "Plus de 50 personnes"],
+      "objective": "Objectif principal",
+      "objectivePlaceholder": "Ex. : rendre l'équipe marketing autonome sur l'IA",
+      "budget": "Budget indicatif",
+      "budgetOptions": ["Moins de $500", "$500 – $1 500", "$1 500 – $5 000", "Plus de $5 000", "À définir ensemble"],
+      "timeline": "Délai souhaité",
+      "timelineOptions": ["Dès que possible", "Dans le mois", "Dans le trimestre", "Pas encore de date précise"],
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi…",
+      "successTitle": "Demande reçue.",
+      "successBody": "Merci — un membre de l'équipe Mwezi Academy revient vers vous sous 48h ouvrées.",
+      "errorRequired": "Ce champ est requis.",
+      "errorInvalidEmail": "Adresse email invalide."
+    }
+  },
+  "university": {
+    "eyebrow": "Universités",
+    "title": "Rendez vos étudiants opérationnels avant le diplôme.",
+    "subtitle": "Conférences, workshops, masterclasses et programmes intensifs en marketing, IA, entrepreneuriat et développement — conçus avec des praticiens, pas de la théorie recyclée.",
+    "ctaPrimary": "Demander un partenariat",
+    "ctaSecondary": "Voir un programme type",
+    "why": {
+      "title": "Pourquoi un partenariat avec Mwezi Academy",
+      "items": [
+        { "name": "Employabilité", "desc": "Vos étudiants sortent avec des compétences directement utilisables en entretien." },
+        { "name": "Praticiens", "desc": "Formés par des consultants en activité, pas uniquement par des supports de cours." },
+        { "name": "Co-construit", "desc": "Le programme s'adapte à votre calendrier académique et à votre public." },
+        { "name": "Certifiant", "desc": "Un certificat co-brandé université × Mwezi Academy à la clé." }
+      ]
+    },
+    "formats": {
+      "title": "Les formats possibles",
+      "items": [
+        { "name": "Conférence", "duration": "1 à 2 h", "desc": "Une intervention ponctuelle pour ouvrir un sujet à un grand groupe." },
+        { "name": "Workshop", "duration": "Demi-journée", "desc": "Un format pratique, en petit groupe, avec un livrable à la clé." },
+        { "name": "Masterclass", "duration": "Session unique", "desc": "Un expert, un sujet précis, traité en profondeur." },
+        { "name": "Programme intensif", "duration": "1 à 2 semaines", "desc": "Un parcours complet, pendant les vacances ou en semaine dédiée." }
+      ]
+    },
+    "who": {
+      "title": "Étudiants et enseignants",
+      "items": [
+        { "name": "Étudiants", "desc": "Compétences directement employables : marketing, IA, no-code, présentation." },
+        { "name": "Enseignants", "desc": "Formation de formateurs pour intégrer ces compétences dans vos propres cours." }
+      ]
+    },
+    "example": {
+      "title": "Exemple de programme : Semaine Compétences Numériques",
+      "subtitle": "5 jours, 5 compétences, un seul objectif : l'employabilité.",
+      "days": [
+        { "day": "Jour 1", "title": "Marketing digital", "desc": "Les bases d'une stratégie d'acquisition qui fonctionne vraiment." },
+        { "day": "Jour 2", "title": "IA pour étudiants", "desc": "Claude et ChatGPT appliqués aux études et à la recherche d'emploi." },
+        { "day": "Jour 3", "title": "Branding personnel", "desc": "Construire une présence professionnelle avant le premier CV." },
+        { "day": "Jour 4", "title": "Bases dev & no-code", "desc": "Créer un site ou un prototype sans attendre un développeur." },
+        { "day": "Jour 5", "title": "Pitch & présentation", "desc": "Présenter un projet avec impact, devant un vrai jury." }
+      ]
+    },
+    "modalities": {
+      "title": "Modalités",
+      "items": [
+        { "name": "Convention de partenariat", "desc": "Un cadre clair entre votre établissement et Mwezi Academy." },
+        { "name": "Tarif par étudiant ou forfait campus", "desc": "Selon le volume et la régularité du partenariat." },
+        { "name": "Certificat co-brandé", "desc": "Un certificat de participation université × Mwezi Academy." }
+      ]
+    },
+    "form": {
+      "title": "Demander un partenariat",
+      "subtitle": "Décrivez votre établissement et vos besoins, on revient vers vous sous 48h ouvrées.",
+      "university": "Nom de l'université",
+      "faculty": "Faculté / département",
+      "contactName": "Votre nom",
+      "email": "Email professionnel",
+      "studentCount": "Nombre d'étudiants estimé",
+      "studentCountOptions": ["Moins de 30", "30 à 100", "100 à 300", "Plus de 300"],
+      "period": "Période souhaitée",
+      "periodOptions": ["Ce semestre", "Semestre prochain", "Vacances", "Pas encore de date précise"],
+      "objective": "Objectif du partenariat",
+      "objectivePlaceholder": "Ex. : semaine intensive pour les étudiants en dernière année",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi…",
+      "successTitle": "Demande reçue.",
+      "successBody": "Merci — un membre de l'équipe Mwezi Academy revient vers vous sous 48h ouvrées.",
+      "errorRequired": "Ce champ est requis.",
+      "errorInvalidEmail": "Adresse email invalide."
+    }
+  },
+  "founders": {
+    "eyebrow": "Formateurs",
+    "title": "Deux frères. Stratégie et exécution.",
+    "subtitle": "Axel et Ruddy Kaumba forment le duo fondateur — un profil orienté stratégie et croissance, l'autre technique et production. C'est cette complémentarité, pas un discours marketing, qui structure la pédagogie de Mwezi Academy.",
+    "complementary": {
+      "title": "Ce que ça change pour la marque",
+      "body": "Axel porte la stratégie, le growth et le branding — agences, hôtellerie, marque de mode. Ruddy porte la technique, le contenu vidéo et la relation client — sites web, montage, coordination éditoriale. Chaque formation est conçue pour porter les deux dimensions : comprendre la stratégie, et savoir l'exécuter."
+    },
+    "labels": {
+      "education": "Formation",
+      "experience": "Expérience",
+      "skills": "Compétences",
+      "certifications": "Certifications",
+      "languages": "Langues"
+    },
+    "members": [
+      {
+        "name": "Axel L'Or Katshiza Kaumba",
+        "role": "Growth & Brand Strategist",
+        "bio": "Responsable marketing orienté performance, spécialisé en stratégie digitale, acquisition client et branding. Fondateur de Mwezi Partners, cabinet de conseil en marketing stratégique.",
+        "education": [
+          "Master Marketing Digital, Université Internationale d'Agadir (2023–2025)",
+          "Licence Gestion Commerciale, Université Internationale d'Agadir (2020–2023)",
+          "Diplôme d'État Commerciale & Gestion, Complexe Scolaire Balou, Lubumbashi, RDC (2014–2020)"
+        ],
+        "experience": [
+          "Fondateur & Gérant, Mwezi Partners",
+          "Responsable Marketing & Commercial, Groupe Stabel (Bruxelles)",
+          "Brand Content Specialist, Havas Edge France (Paris)",
+          "Stratège Marketing Social, Zed Conseil (Lyon)",
+          "Consultant Marketing, X4U & FollowApp (Paris)",
+          "Assistant Direction / Content / Commercial, Major Media (Agadir)",
+          "Digital Marketing Assistant, Fromital (Agadir)",
+          "Reporter, UNICEF (Lubumbashi, RDC)"
+        ],
+        "skills": [
+          "Stratégie d'acquisition (SEO, Ads, emailing)",
+          "Branding & positionnement",
+          "Meta, Google & TikTok Ads",
+          "Direction artistique",
+          "Canva & Photoshop",
+          "Lancement de marque"
+        ],
+        "certifications": [
+          "HubSpot — Marketing des réseaux sociaux",
+          "HubSpot — SEO",
+          "HubSpot — Digital Advertising",
+          "Microsoft MOS 2019"
+        ],
+        "languages": ["Français (courant)", "Anglais (B2)", "Espagnol (A1)", "Swahili & Lingala (natifs)"]
+      },
+      {
+        "name": "Ruddy Kakoma Kaumba",
+        "role": "Consultant Marketing & Communication Digitale",
+        "bio": "Consultant indépendant depuis 2023, à l'aise autant sur la technique (code, sites, vidéo) que sur la stratégie de communication — le profil le plus polyvalent du duo.",
+        "education": [
+          "Master Gestion Marketing, ISIAM / Université Internationale d'Agadir (2023–2025)",
+          "Licence Communication des Organisations, SUP.H.COM / Université Internationale d'Agadir (2020–2023)",
+          "Diplôme d'État option Latin-Philosophie, Complexe Scolaire Balou, Lubumbashi (2014–2020)"
+        ],
+        "experience": [
+          "Consultant Marketing & Communication Digitale indépendant (depuis 2023)",
+          "Chef de Projet Marketing, Sofitel Agadir Thalassa Sea & Spa (2024–2025)",
+          "Customer Success Coordinator, Custplace",
+          "Attaché de presse, Festival Timitar 2024",
+          "Commercial & Marketing/Production, Major Media / Energiedin"
+        ],
+        "skills": [
+          "Codage HTML / CSS",
+          "Création de sites web",
+          "Montage vidéo",
+          "Marketing stratégique",
+          "Gestion d'équipe",
+          "Prise de parole en public"
+        ],
+        "certifications": [
+          "HubSpot — Digital Advertising",
+          "HubSpot — SEO",
+          "HubSpot — Marketing des réseaux sociaux"
+        ],
+        "languages": ["Français (courant)", "Anglais (B2/C1)", "Swahili"]
+      }
+    ],
+    "ctaTitle": "Envie d'apprendre avec eux ?",
+    "ctaPrimary": "Explorer les formations",
+    "ctaSecondary": "Former mon équipe"
+  },
+  "projects": {
+    "eyebrow": "Crédibilité",
+    "title": "Des projets réels. Des compétences réelles.",
+    "subtitle": "Ce qu'on enseigne, on l'a fait avant — pour des clients réels, pas sur des cas fictifs. Chaque projet ci-dessous a été réellement mené par un des fondateurs.",
+    "featuredLabel": "Projets détaillés",
+    "otherLabel": "Autres collaborations",
+    "otherNote": "Rôle confirmé, détails de la mission à documenter.",
+    "skillsLabel": "Compétences mobilisées",
+    "featured": [
+      {
+        "name": "Mwezi Partners",
+        "sector": "Conseil en stratégie marketing",
+        "tagline": "Le cabinet qui a précédé l'académie.",
+        "points": [
+          "Positionnement et offres de conseil définis de zéro",
+          "Stratégies marketing 360° pour plusieurs clients",
+          "Direction artistique et développement commercial B2B"
+        ],
+        "note": "Clients accompagnés : Literie de Kinshasa, MASS ACTIVE, Agence Almunawwarah.",
+        "skills": ["Strategic Marketing", "Brand Strategy", "Business Development"]
+      },
+      {
+        "name": "Digitatix",
+        "sector": "Agence marketing · 2024",
+        "tagline": "Une agence lancée de A à Z, premiers clients en 4 mois.",
+        "points": [
+          "Branding et positionnement de l'agence",
+          "Offre marketing 360° structurée",
+          "Stratégie d'acquisition des premiers clients"
+        ],
+        "note": null,
+        "skills": ["Branding", "Positionnement", "Acquisition"]
+      },
+      {
+        "name": "Generation Collection",
+        "sector": "Mode · 2023–2025",
+        "tagline": "Une marque de mode, de l'identité visuelle à l'e-commerce.",
+        "points": [
+          "Identité visuelle et stratégie de marque",
+          "Pilotage de la production textile",
+          "Storytelling premium différenciant"
+        ],
+        "note": null,
+        "skills": ["Direction artistique", "Branding", "E-commerce"]
+      },
+      {
+        "name": "Safari Vizuri",
+        "sector": "Travel tech / hospitalité",
+        "tagline": "Une plateforme de voyage pensée pour l'Afrique, de A à Z.",
+        "points": [
+          "Positionnement et proposition de valeur",
+          "Stratégie de lancement et de pré-lancement",
+          "Acquisition des premiers établissements partenaires",
+          "Direction créative des campagnes de lancement"
+        ],
+        "note": "Trajectoire prévue : évolution vers une plateforme SaaS de gestion (réservations, tarifs, paiements) pour les établissements.",
+        "skills": ["Brand Strategy", "Go-to-Market", "Business Development"]
+      },
+      {
+        "name": "Maison Arvela",
+        "sector": "Parfumerie de luxe",
+        "tagline": "Une maison de parfumerie, du flacon à la campagne.",
+        "points": [
+          "Positionnement premium et architecture de collection",
+          "Univers esthétique et identité visuelle",
+          "Direction artistique des produits et des shootings",
+          "Packaging : flacons en verre cristal, capuchons gravés"
+        ],
+        "note": "Collection NOCTIS, EMBER, IVORY, OBSIDIAN.",
+        "skills": ["Luxury Branding", "Creative Direction", "Packaging"]
+      },
+      {
+        "name": "Reed Signature",
+        "sector": "Produit durable · hôtellerie-restauration (B2B)",
+        "tagline": "Transformer une paille en roseau en objet de marque premium.",
+        "points": [
+          "Positionnement et codes de communication du produit",
+          "Personnalisation et gravure du produit",
+          "Concepts de packaging",
+          "Mises en scène en restaurant et en bar"
+        ],
+        "note": null,
+        "skills": ["Product Branding", "B2B Marketing", "Sustainable Branding"]
+      }
+    ],
+    "other": [
+      {
+        "name": "Arteast Music × Sterkte Records",
+        "sector": "Label musical · 2025",
+        "role": "Direction artistique et pilotage de projet."
+      },
+      {
+        "name": "Elief Agency",
+        "sector": "Agence · Juin–Août 2023",
+        "role": "Coordination éditoriale & branding."
+      },
+      {
+        "name": "X4U — Experts For You",
+        "sector": "Cabinet comptable · Paris",
+        "role": "Consultant Marketing."
+      },
+      {
+        "name": "FollowApp",
+        "sector": "Application · Paris",
+        "role": "Consultant Marketing."
+      }
+    ],
+    "ctaTitle": "Envie de travailler avec la même équipe ?",
+    "ctaPrimary": "Former mon équipe",
+    "ctaSecondary": "Voir les formateurs"
+  },
+  "account": {
+    "eyebrow": "Espace étudiant",
+    "title": "Bonjour, Amina.",
+    "previewBanner": "Aperçu de l'espace étudiant — données d'exemple. La connexion, les achats et la progression réelle nécessitent l'authentification et une base de données, à provisionner avant le lancement.",
+    "enrolledTitle": "Mes formations",
+    "progressLabel": "Progression",
+    "continueLabel": "Continuer",
+    "certificatesTitle": "Mes certificats",
+    "certificateVerify": "Vérifier",
+    "certificateExample": "Exemple — certificat non délivré",
+    "profileTitle": "Profil",
+    "profileFields": { "name": "Nom", "email": "Email", "language": "Langue préférée", "memberSince": "Membre depuis" },
+    "purchasesTitle": "Historique d'achats",
+    "purchasesEmpty": "Aucun achat pour l'instant — exemple ci-dessous.",
+    "sampleEnrolled": [
+      { "slug": "chatgpt-claude-entrepreneurs", "progress": 80 },
+      { "slug": "meta-ads-premiere-campagne", "progress": 45 },
+      { "slug": "canva-pour-entrepreneurs", "progress": 100 }
+    ]
+  },
+  "resources": {
+    "eyebrow": "Ressources",
+    "title": "Guides, méthodes et prompts",
+    "subtitle": "Du contenu gratuit pour avancer entre deux formations — écrit par les mêmes praticiens.",
+    "readTime": "min de lecture",
+    "backToResources": "← Retour aux ressources",
+    "articles": [
+      {
+        "slug": "5-prompts-chatgpt-a-voler",
+        "category": "Intelligence artificielle",
+        "title": "5 prompts ChatGPT à voler pour votre business",
+        "excerpt": "Pas des astuces génériques — des prompts testés sur de vrais cas d'entrepreneurs.",
+        "readTime": 4,
+        "date": "2026-08-12",
+        "body": [
+          "La plupart des prompts qui circulent sont trop vagues pour être utiles. Voici cinq formulations qui donnent un résultat exploitable dès le premier essai.",
+          "1. « Agis comme un client sceptique et pose-moi 5 objections sur cette offre : [décrire l'offre]. » — pour tester une offre avant de la publier.",
+          "2. « Résume ces 10 avis clients en 3 thèmes récurrents, avec une citation pour chacun. » — pour transformer des retours dispersés en decision utile.",
+          "3. « Réécris ce message pour un lecteur qui a 10 secondes, pas 2 minutes. » — pour tout ce qui part sur WhatsApp ou en story.",
+          "4. « Liste les 5 questions qu'un client poserait avant d'acheter [produit], et réponds à chacune en une phrase. » — la base d'une bonne FAQ.",
+          "5. « Transforme ces notes en 3 posts LinkedIn distincts, un angle différent à chaque fois. » — pour arrêter de fixer une page blanche.",
+          "Le point commun : chaque prompt donne un rôle précis à l'IA et une contrainte de format. C'est ce qui fait la différence entre une réponse générique et un résultat utilisable."
+        ]
+      },
+      {
+        "slug": "meta-ads-sans-budget",
+        "category": "Marketing",
+        "title": "Meta Ads sans gros budget : ce qui marche vraiment",
+        "excerpt": "Avec $20 par jour, voici où les mettre — et où ne surtout pas les mettre.",
+        "readTime": 5,
+        "date": "2026-07-28",
+        "body": [
+          "Avec un petit budget, l'erreur la plus commune est de vouloir toucher tout le monde. Un ciblage large dilue chaque dollar dépensé.",
+          "Première règle : un objectif, une campagne. Ne mélangez pas notoriété et conversion dans la même campagne — l'algorithme optimise pour un seul signal à la fois.",
+          "Deuxième règle : laissez la campagne tourner au moins 3 à 4 jours avant de juger les résultats. Couper trop tôt empêche l'algorithme de trouver son audience.",
+          "Troisième règle : un bon visuel bat un bon ciblage. Avec un petit budget, investissez le temps économisé sur le ciblage dans un visuel qui arrête le scroll.",
+          "Enfin, mesurez le coût par résultat, pas seulement la portée. Une campagne qui touche moins de monde mais convertit mieux reste plus rentable."
+        ]
+      },
+      {
+        "slug": "un-seul-mot-cle-pour-votre-marque",
+        "category": "Branding",
+        "title": "Pourquoi votre marque a besoin d'un seul mot-clé",
+        "excerpt": "Les marques qui essaient de tout dire ne disent rien. Voici comment trouver le seul mot qui compte.",
+        "readTime": 3,
+        "date": "2026-07-05",
+        "body": [
+          "Demandez à dix personnes de décrire votre marque en un mot. Si vous obtenez dix réponses différentes, ce n'est pas un problème de communication — c'est un problème de positionnement.",
+          "Une marque forte possède un seul mot dans la tête de son client : rapide, accessible, premium, local. Tout le reste — le ton, les visuels, le pricing — doit servir ce mot, pas le concurrencer.",
+          "Pour le trouver : listez tout ce que votre marque pourrait revendiquer, puis biffez tout ce que vos concurrents peuvent dire aussi. Ce qui reste est votre mot-clé.",
+          "Ce n'est pas un slogan. C'est le filtre qui doit guider chaque décision de marque à partir de maintenant."
+        ]
+      },
+      {
+        "slug": "mobile-money-tunnel-de-vente",
+        "category": "Digital",
+        "title": "Mobile money : ce que ça change pour votre tunnel de vente",
+        "excerpt": "Le paiement mobile n'est pas juste une option de plus — il change la façon de construire tout le tunnel.",
+        "readTime": 4,
+        "date": "2026-06-19",
+        "body": [
+          "Un tunnel de vente pensé pour la carte bancaire ne fonctionne pas tel quel pour le mobile money — les habitudes de paiement sont différentes, et le tunnel doit s'y adapter.",
+          "D'abord, le prix doit être visible avant toute friction : pas de formulaire à remplir avant de voir le montant final en USD ou en monnaie locale.",
+          "Ensuite, le paiement doit rester dans l'app ou la conversation autant que possible — chaque redirection externe fait perdre des clients.",
+          "Enfin, confirmez toujours la réception du paiement par un message immédiat, même basique. L'incertitude sur « est-ce que ça a marché ? » est la première cause d'abandon après paiement.",
+          "Le mobile money n'est pas un moyen de paiement secondaire à ajouter à la fin — c'est un point de départ à intégrer dès la conception du tunnel."
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "reviewBanner": "Modèle de page juridique — les champs entre crochets doivent être complétés et l'ensemble validé par un professionnel du droit avant toute publication.",
+    "notice": {
+      "title": "Mentions légales",
+      "updated": "Dernière mise à jour : à définir",
+      "sections": [
+        {
+          "heading": "Éditeur du site",
+          "body": "Mwezi Academy est édité par [raison sociale et forme juridique à définir], dont le siège est situé à [adresse à compléter]. Numéro d'immatriculation : [à compléter]. Contact : [email à compléter]."
+        },
+        {
+          "heading": "Directeur de la publication",
+          "body": "[Nom du responsable de publication à compléter]."
+        },
+        {
+          "heading": "Hébergement",
+          "body": "Ce site est hébergé par [nom et adresse de l'hébergeur à compléter une fois le déploiement effectué]."
+        },
+        {
+          "heading": "Propriété intellectuelle",
+          "body": "L'ensemble des contenus présents sur ce site (textes, visuels, identité de marque, supports pédagogiques) est la propriété de Mwezi Academy ou de ses fondateurs, sauf mention contraire. Toute reproduction sans autorisation est interdite."
+        },
+        {
+          "heading": "Contact",
+          "body": "Pour toute question relative à ces mentions légales : [email de contact à compléter]."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Conditions générales de vente",
+      "updated": "Dernière mise à jour : à définir",
+      "sections": [
+        {
+          "heading": "Objet",
+          "body": "Les présentes conditions régissent la vente de formations, ateliers, bootcamps et programmes proposés par Mwezi Academy, en ligne comme en présentiel."
+        },
+        {
+          "heading": "Prix et paiement",
+          "body": "Les prix sont affichés en dollars américains (USD), toutes taxes comprises sauf mention contraire. Le paiement s'effectue par mobile money (Airtel Money, Orange Money, M-Pesa) ou par carte bancaire selon les moyens disponibles au moment de l'achat."
+        },
+        {
+          "heading": "Accès aux formations",
+          "body": "L'accès à une formation est ouvert dès confirmation du paiement, pour la durée précisée sur la page de la formation concernée. [Durée d'accès standard à définir]."
+        },
+        {
+          "heading": "Droit de rétractation et remboursement",
+          "body": "[Politique de remboursement à définir : délai de rétractation, conditions d'éligibilité, modalités de demande.]"
+        },
+        {
+          "heading": "Certification",
+          "body": "Une attestation de participation ou un certificat de compétence est délivré selon les conditions propres à chaque formation, précisées sur sa page produit."
+        },
+        {
+          "heading": "Responsabilité",
+          "body": "Mwezi Academy s'engage à fournir un contenu pédagogique de qualité mais ne garantit pas de résultat commercial spécifique découlant du suivi d'une formation."
+        },
+        {
+          "heading": "Droit applicable",
+          "body": "[Droit applicable et juridiction compétente à définir avec un conseil juridique.]"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "updated": "Dernière mise à jour : à définir",
+      "sections": [
+        {
+          "heading": "Données collectées",
+          "body": "Nous collectons les informations que vous fournissez directement (nom, email, informations de paiement traitées par un prestataire tiers) ainsi que des données techniques liées à l'utilisation du site (pages visitées, appareil, origine du trafic)."
+        },
+        {
+          "heading": "Finalités",
+          "body": "Ces données sont utilisées pour fournir l'accès aux formations, traiter les paiements, répondre aux demandes (formulaires entreprise et université), et améliorer le site."
+        },
+        {
+          "heading": "Conservation",
+          "body": "[Durée de conservation des données à définir selon la réglementation applicable.]"
+        },
+        {
+          "heading": "Partage avec des tiers",
+          "body": "Certaines données sont partagées avec des prestataires strictement nécessaires au fonctionnement du site : traitement des paiements, hébergement, outils d'analyse d'audience."
+        },
+        {
+          "heading": "Cookies et analytics",
+          "body": "Le site utilise des cookies techniques nécessaires à son fonctionnement, ainsi que des outils de mesure d'audience [à préciser une fois les outils choisis]."
+        },
+        {
+          "heading": "Vos droits",
+          "body": "Vous pouvez demander l'accès, la correction ou la suppression de vos données personnelles en nous contactant à [email de contact à compléter]."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "Marketing, digital, IA — appris en pratiquant.",
+    "columns": {
+      "formations": { "title": "Formations", "links": ["Marketing", "Branding", "Intelligence artificielle", "Développement"] },
+      "academie": { "title": "Académie", "links": ["Entreprises", "Universités", "Formateurs", "Ressources"] },
+      "legal": { "title": "Légal", "links": ["Mentions légales", "Confidentialité", "CGV"] }
+    },
+    "rights": "Tous droits réservés."
+  }
+}

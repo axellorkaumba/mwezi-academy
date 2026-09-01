@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #edeae2;
+  --border: #dedad0;
+  --ink: #1b1712;
+  --ink-muted: #655f54;
+  --ember: #c46a1b;
+  --ember-strong: #a6560f;
+  --teal: #0f8f76;
+  --accent-ink: #1b1712;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0b0f14;
+    --surface: #12171f;
+    --surface-2: #1a212b;
+    --border: #252d38;
+    --ink: #edebe4;
+    --ink-muted: #9a9a94;
+    --ember: #f2a33e;
+    --ember-strong: #f7b65c;
+    --teal: #35c7a6;
+    --accent-ink: #0b0f14;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ember: var(--ember);
+  --color-ember-strong: var(--ember-strong);
+  --color-teal: var(--teal);
+  --color-accent-ink: var(--accent-ink);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-plex-mono);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--ember);
+  color: var(--accent-ink);
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
