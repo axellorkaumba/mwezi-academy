@@ -2,6 +2,8 @@
 
 import { checkBotId } from "botid/server";
 import type { UniversityLeadState } from "@/lib/university-lead";
+import { getDb } from "@/db";
+import { universityLeads } from "@/db/schema";
 
 const REQUIRED_FIELDS = ["university", "contactName", "email", "studentCount", "objective"] as const;
 
@@ -29,19 +31,18 @@ export async function submitUniversityLead(
     return { status: "error", errors };
   }
 
-  // TODO(production): this only logs the lead — wire a real email/CRM
-  // integration (e.g. Resend, or a CRM connector) via the Vercel Marketplace
-  // before launch, so a submission actually reaches the founders.
-  console.log("[university-lead]", {
+  await getDb().insert(universityLeads).values({
     university: values.university,
-    faculty: values.faculty,
+    faculty: values.faculty || null,
     contactName: values.contactName,
     email: values.email,
     studentCount: values.studentCount,
-    period: values.period,
+    period: values.period || null,
     objective: values.objective,
-    receivedAt: new Date().toISOString(),
   });
+
+  // TODO(production): also notify the founders by email (e.g. Resend) so a
+  // submission doesn't require checking the admin back-office to be noticed.
 
   return { status: "success", errors: {} };
 }

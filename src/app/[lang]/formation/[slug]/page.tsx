@@ -6,6 +6,7 @@ import { courses, categoryLabels, instructorNames } from "@/lib/courses";
 import { getCourseDetail } from "@/lib/course-detail";
 import { Accordion } from "@/components/accordion";
 import { StickyCourseCta } from "@/components/sticky-course-cta";
+import { EnrollmentForm } from "@/components/enrollment-form";
 
 export async function generateStaticParams() {
   return locales.flatMap((lang) => courses.map((c) => ({ lang, slug: c.slug })));
@@ -43,8 +44,8 @@ export default async function CoursePage({
   if (!course) notFound();
 
   const detail = getCourseDetail(course);
-  const instructorMember =
-    course.instructor === "axel" ? dict.team.members[0] : dict.team.members[1];
+  const instructorIndex = { axel: 0, ruddy: 1, abraham: 2 }[course.instructor];
+  const instructorMember = dict.team.members[instructorIndex];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -98,16 +99,16 @@ export default async function CoursePage({
             <Stat label={dict.catalog.formats[course.format]} />
             <Stat label={course.durationLabel[l]} />
             <Stat label={`${course.modules} ${dict.course.modulesLabel}`} />
-            <div className="ml-auto flex items-center gap-4" id="enroll">
+            <div className="ml-auto flex items-center gap-4">
               <span className="font-display text-3xl font-semibold tabular-nums">
                 ${course.priceUSD}
               </span>
-              <button
-                type="button"
+              <a
+                href="#enroll"
                 className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-ember hover:text-accent-ink"
               >
                 {dict.course.enroll}${course.priceUSD}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -205,16 +206,15 @@ export default async function CoursePage({
           </div>
         </div>
 
-        {/* ---------- Ready ---------- */}
-        <div className="border-t border-border py-16 text-center sm:py-20">
-          <h2 className="font-display text-3xl font-semibold">{dict.course.readyTitle}</h2>
-          <p className="mt-2 text-ink-muted">{dict.course.readySubtitle}</p>
-          <a
-            href="#enroll"
-            className="mt-7 inline-flex items-center justify-center rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-colors hover:bg-ember hover:text-accent-ink"
-          >
-            {dict.course.enroll}${course.priceUSD}
-          </a>
+        {/* ---------- Enroll ---------- */}
+        <div id="enroll" className="border-t border-border py-16 sm:py-20">
+          <div className="mx-auto max-w-md text-center">
+            <h2 className="font-display text-3xl font-semibold">{dict.enroll.title}</h2>
+            <p className="mt-2 text-ink-muted">{dict.enroll.subtitle}</p>
+          </div>
+          <div className="mx-auto mt-8 max-w-md">
+            <EnrollmentForm dict={dict} courseSlug={course.slug} price={course.priceUSD} />
+          </div>
         </div>
       </div>
 

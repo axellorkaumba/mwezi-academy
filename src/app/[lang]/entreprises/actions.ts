@@ -2,6 +2,8 @@
 
 import { checkBotId } from "botid/server";
 import type { EnterpriseLeadState } from "@/lib/enterprise-lead";
+import { getDb } from "@/db";
+import { enterpriseLeads } from "@/db/schema";
 
 const REQUIRED_FIELDS = ["company", "contactName", "email", "teamSize", "objective"] as const;
 
@@ -29,19 +31,18 @@ export async function submitEnterpriseLead(
     return { status: "error", errors };
   }
 
-  // TODO(production): this only logs the lead — wire a real email/CRM
-  // integration (e.g. Resend, or a CRM connector) via the Vercel Marketplace
-  // before launch, so a submission actually reaches the founders.
-  console.log("[enterprise-lead]", {
+  await getDb().insert(enterpriseLeads).values({
     company: values.company,
     contactName: values.contactName,
     email: values.email,
     teamSize: values.teamSize,
     objective: values.objective,
-    budget: values.budget,
-    timeline: values.timeline,
-    receivedAt: new Date().toISOString(),
+    budget: values.budget || null,
+    timeline: values.timeline || null,
   });
+
+  // TODO(production): also notify the founders by email (e.g. Resend) so a
+  // submission doesn't require checking the admin back-office to be noticed.
 
   return { status: "success", errors: {} };
 }

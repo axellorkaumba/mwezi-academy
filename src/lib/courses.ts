@@ -10,7 +10,7 @@ export type Level = "debutant" | "intermediaire" | "avance";
 
 export type Format = "mini" | "formation" | "bootcamp" | "masterclass" | "programme";
 
-export type Instructor = "axel" | "ruddy";
+export type Instructor = "axel" | "ruddy" | "abraham";
 
 export interface Course {
   slug: string;
@@ -46,6 +46,7 @@ export const categoryLabels: Record<Category, { fr: string; en: string }> = {
 export const instructorNames: Record<Instructor, string> = {
   axel: "Axel Kaumba",
   ruddy: "Ruddy Kaumba",
+  abraham: "Abraham Tchio",
 };
 
 export const courses: Course[] = [

@@ -3,6 +3,20 @@
     "title": "Mwezi Academy — Marketing, digital and AI, learned by doing",
     "description": "Professional training in marketing, digital, artificial intelligence and digital skills, built for French-speaking Africa. We don't theorize. We forge."
   },
+  "enroll": {
+    "title": "Finish your enrollment",
+    "subtitle": "Fill in your details — you'll then receive the cash payment instructions.",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "country": "Country",
+    "submit": "Confirm enrollment",
+    "submitting": "Sending…",
+    "successTitle": "Enrollment recorded.",
+    "successBody": "Payment of ${amount} is made in cash, in person to a Mwezi Academy instructor or referent — you'll be contacted by email or phone to arrange the details. Your access to the course will be activated once payment is received.",
+    "errorRequired": "This field is required.",
+    "errorInvalidEmail": "Invalid email address."
+  },
   "nav": {
     "formations": "Courses",
     "entreprises": "Business",
@@ -79,7 +93,7 @@
   },
   "team": {
     "eyebrow": "Instructors",
-    "title": "Two brothers. Strategy and execution.",
+    "title": "Three practitioners. Strategy, execution, sales performance.",
     "members": [
       {
         "name": "Axel L'Or Katshiza Kaumba",
@@ -90,6 +104,11 @@
         "name": "Ruddy Kakoma Kaumba",
         "role": "Marketing & Digital Communication Consultant",
         "bio": "Technical execution, video content and websites — Sofitel Agadir, Custplace, and independent consultant since 2023."
+      },
+      {
+        "name": "Abraham Diassibo Tchio",
+        "role": "Sales & Performance Coach",
+        "bio": "Sales and commercial performance built on the floor — sales advisor at Concentrix, then team leader at Webhelp, consistently exceeding sales targets."
       }
     ]
   },
@@ -294,11 +313,11 @@
   },
   "founders": {
     "eyebrow": "Instructors",
-    "title": "Two brothers. Strategy and execution.",
-    "subtitle": "Axel and Ruddy Kaumba are the founding duo — one profile oriented toward strategy and growth, the other toward technical execution. That complementarity, not a marketing line, is what structures Mwezi Academy's teaching.",
+    "title": "Three practitioners. Strategy, execution, sales performance.",
+    "subtitle": "Axel and Ruddy Kaumba carry strategy and digital execution. Abraham Tchio carries sales and commercial performance, built on the floor. Three real track records, not a marketing line, structure Mwezi Academy's teaching.",
     "complementary": {
       "title": "What that means for the brand",
-      "body": "Axel carries strategy, growth and branding — agencies, hospitality, a fashion brand. Ruddy carries technical execution, video content and client relations — websites, editing, editorial coordination. Every course is built to carry both dimensions: understanding the strategy, and knowing how to execute it."
+      "body": "Axel carries strategy, growth and branding — agencies, hospitality, a fashion brand. Ruddy carries technical execution, video content and client relations — websites, editing, editorial coordination. Abraham carries sales and commercial performance — sales advisor then team leader in a call center environment, consistently exceeding targets. Every course is built to carry these dimensions: understanding the strategy, knowing how to execute it, and knowing how to sell."
     },
     "labels": {
       "education": "Education",
@@ -373,6 +392,32 @@
           "HubSpot — Social Media Marketing"
         ],
         "languages": ["French (fluent)", "English (B2/C1)", "Swahili"]
+      },
+      {
+        "name": "Abraham Diassibo Tchio",
+        "role": "Sales & Performance Coach",
+        "bio": "Sales and commercial performance built in a call center environment — sales advisor at Concentrix, then team leader at Webhelp, consistently exceeding sales targets. Complements this with a project management and continuous-improvement background.",
+        "education": [
+          "MBA in Business Administration, Académie des Sciences de Management de Paris / EMAA, Agadir, Morocco (2021–2022)",
+          "Bachelor's in Mathematical Sciences and Applications, Faculté des Sciences Ibn Zohr, Agadir, Morocco (2015–2021)",
+          "Baccalauréat, Series D, Collège et Lycée Mariama, Niamey, Niger (2013–2015)"
+        ],
+        "experience": [
+          "Team Leader, Webhelp (~1 year)",
+          "Sales Advisor, Concentrix (~1 year)",
+          "Change Project Officer, Société de Manutention d'Agadir / Marsa Maroc (2022)",
+          "Executive Assistant, Église Catholique Sainte Anne, Agadir (2017–2021)"
+        ],
+        "skills": [
+          "Prospecting & phone sales",
+          "Objection handling",
+          "Sales team coaching",
+          "Project management (Ms Project)",
+          "Continuous improvement (5S, Kaizen, SOP)",
+          "Change management"
+        ],
+        "certifications": ["Réussir le changement (2023)"],
+        "languages": ["French (fluent)", "English"]
       }
     ],
     "ctaTitle": "Want to learn with them?",

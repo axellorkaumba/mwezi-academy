@@ -175,9 +175,9 @@ export default async function HomePage({
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-5 sm:px-8 py-20">
           <SectionHead eyebrow={dict.team.eyebrow} title={dict.team.title} />
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {dict.team.members.map((m, i) => (
-              <Reveal key={m.name} from={i === 0 ? "left" : "right"}>
+              <Reveal key={m.name} from={i === 0 ? "left" : i === 1 ? "up" : "right"}>
                 <div className="rounded-2xl border border-border bg-surface p-7">
                   <div className="h-12 w-12 rounded-full bg-surface-2 border border-border" aria-hidden />
                   <h3 className="mt-4 font-display text-lg font-semibold">{m.name}</h3>
