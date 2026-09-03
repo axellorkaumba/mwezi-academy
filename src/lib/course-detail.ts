@@ -310,6 +310,80 @@ function rotateModules(pool: Bi[], count: number): Bi[] {
   return out;
 }
 
+// Per-course module overrides. The shared category pools above work fine as
+// sales-page teaser copy, but rotateModules never applies the level offset —
+// an intermediate course and a beginner course in the same category end up
+// with near-identical module titles. For courses where real lesson content
+// has been written (content/courses/*.md), the modules here must match that
+// content exactly, so they're listed explicitly rather than pulled from the
+// generic pool.
+const moduleOverrides: Partial<Record<string, Bi[]>> = {
+  "meta-ads-premiere-campagne": [
+    t("Comprendre le Gestionnaire de publicités Meta", "Understanding Meta Ads Manager"),
+    t("Définir son audience cible", "Defining your target audience"),
+    t("Choisir le bon objectif de campagne", "Choosing the right campaign objective"),
+    t("Structurer une campagne (campagne, ensemble, publicité)", "Structuring a campaign (campaign, ad set, ad)"),
+    t("Créer une publicité qui capte l'attention", "Creating an ad that grabs attention"),
+    t("Fixer un budget et une enchère", "Setting a budget and a bid"),
+    t("Lire ses résultats et ses indicateurs clés", "Reading your results and key metrics"),
+    t("Optimiser et relancer une campagne rentable", "Optimizing and relaunching a profitable campaign"),
+  ],
+  "personal-branding-entrepreneurs": [
+    t("Pourquoi se rendre visible sans devenir un influenceur", "Why get visible without becoming an influencer"),
+    t("Clarifier son positionnement personnel", "Clarifying your personal positioning"),
+    t("Choisir ses sujets et sa ligne éditoriale", "Choosing your topics and editorial line"),
+    t("Construire une présence cohérente sur un réseau", "Building a consistent presence on one platform"),
+    t("Prendre la parole sans se sentir artificiel", "Speaking up without feeling fake"),
+    t("Transformer sa visibilité en opportunités concrètes", "Turning visibility into real opportunities"),
+  ],
+  "montage-video-reseaux-sociaux": [
+    t("Préparer son tournage avant de filmer", "Preparing your shoot before filming"),
+    t("Filmer avec un simple téléphone : les réglages qui comptent", "Filming with just a phone: the settings that matter"),
+    t("Prendre en main un logiciel de montage accessible", "Getting started with an accessible editing tool"),
+    t("Structurer un montage qui garde l'attention", "Structuring an edit that holds attention"),
+    t("Ajouter texte, musique et rythme", "Adding text, music and pacing"),
+    t("Adapter un montage à plusieurs formats (Reels, TikTok, Shorts)", "Adapting one edit to multiple formats (Reels, TikTok, Shorts)"),
+    t("Publier au bon moment et avec la bonne description", "Publishing at the right time with the right caption"),
+  ],
+  "automatiser-son-entreprise-avec-lia": [
+    t("Cartographier les tâches répétitives de son entreprise", "Mapping your business's repetitive tasks"),
+    t("Automatiser la rédaction et le tri des emails", "Automating email drafting and sorting"),
+    t("Construire un premier assistant de service client", "Building a first customer service assistant"),
+    t("Automatiser la production de contenu récurrent", "Automating recurring content production"),
+    t("Connecter l'IA à ses outils existants", "Connecting AI to your existing tools"),
+    t("Créer des gabarits réutilisables pour chaque workflow", "Creating reusable templates for each workflow"),
+    t("Garder un contrôle humain sur les automatisations sensibles", "Keeping human oversight on sensitive automations"),
+    t("Mesurer le temps réellement gagné", "Measuring the time actually saved"),
+    t("Étude de cas et plan d'automatisation personnel", "Case study and personal automation plan"),
+  ],
+  "automatiser-avec-les-apis-dia": [
+    t("Comprendre le fonctionnement d'une API d'IA", "Understanding how an AI API works"),
+    t("Obtenir et sécuriser une clé API", "Getting and securing an API key"),
+    t("Envoyer sa première requête et lire la réponse", "Sending your first request and reading the response"),
+    t("Intégrer l'API dans un projet existant", "Integrating the API into an existing project"),
+    t("Gérer les erreurs et les limites de l'API (quotas, coûts)", "Handling API errors and limits (quotas, costs)"),
+    t("Automatiser un traitement en lot", "Automating a batch process"),
+    t("Déployer et surveiller l'intégration en production", "Deploying and monitoring the integration in production"),
+  ],
+  "pricing-strategie-commerciale": [
+    t("Comprendre les différents modèles de tarification", "Understanding different pricing models"),
+    t("Calculer son prix plancher réel", "Calculating your real price floor"),
+    t("Aligner son prix sur la valeur perçue, pas seulement le coût", "Aligning price with perceived value, not just cost"),
+    t("Construire une grille tarifaire (offres, options, paliers)", "Building a pricing grid (tiers, options, packages)"),
+    t("Défendre son prix face à la négociation", "Defending your price against negotiation"),
+    t("Ajuster sa stratégie commerciale selon les résultats", "Adjusting your sales strategy based on results"),
+  ],
+  "gestion-objections-closing": [
+    t("Pourquoi une objection n'est pas un refus", "Why an objection isn't a refusal"),
+    t("Les objections les plus fréquentes et ce qu'elles cachent vraiment", "The most common objections and what they really hide"),
+    t("La méthode en 3 temps pour désamorcer une objection", "The 3-step method to defuse an objection"),
+    t("Objection prix : au-delà de \"c'est trop cher\"", "Price objection: beyond \"it's too expensive\""),
+    t("Objection délai : \"je dois réfléchir\"", "Timing objection: \"I need to think about it\""),
+    t("Techniques de closing : demander l'engagement au bon moment", "Closing techniques: asking for commitment at the right time"),
+    t("Gérer un refus et garder la porte ouverte", "Handling a refusal and keeping the door open"),
+  ],
+};
+
 export function getCourseDetail(course: Course): CourseDetail {
   const offset = levelOffset[course.level];
 
@@ -320,7 +394,7 @@ export function getCourseDetail(course: Course): CourseDetail {
       t(course.description.fr, course.description.en),
       ...rotate(outcomesPools[course.category], offset, 3),
     ],
-    modules: rotateModules(moduleNamePools[course.category], course.modules),
+    modules: moduleOverrides[course.slug] ?? rotateModules(moduleNamePools[course.category], course.modules),
     project: {
       fr: projectTemplate.fr.replace("{title}", course.title.fr),
       en: projectTemplate.en.replace("{title}", course.title.en),
