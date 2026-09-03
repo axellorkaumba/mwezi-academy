@@ -33,7 +33,7 @@
     "ctaPrimary": "Browse courses",
     "ctaSecondary": "Train my team",
     "stats": [
-      { "value": "6", "label": "skill tracks" },
+      { "value": "7", "label": "skill tracks" },
       { "value": "3", "label": "levels, beginner to pro" },
       { "value": "$9", "label": "starting price" },
       { "value": "2", "label": "languages, FR & EN" }
@@ -41,7 +41,7 @@
   },
   "categories": {
     "eyebrow": "Catalog",
-    "title": "Six skill tracks, not a catch-all",
+    "title": "Seven skill tracks, not a catch-all",
     "subtitle": "Every course answers one question: what will you actually be able to do by the end?",
     "items": [
       { "name": "Marketing", "desc": "Strategy, acquisition, SEO, Meta & Google Ads, email marketing, conversion funnels." },
@@ -49,7 +49,8 @@
       { "name": "Content creation", "desc": "Canva, video editing, product photography, DIY visual identity, no-code sites." },
       { "name": "Artificial intelligence", "desc": "Claude, ChatGPT, automation, AI agents — built on real use cases." },
       { "name": "Development", "desc": "AI-assisted coding, APIs, automation, AI-assisted SaaS building." },
-      { "name": "Entrepreneurship", "desc": "Build your offer, land your first clients, pricing, sell online." }
+      { "name": "Entrepreneurship", "desc": "Build your offer, land your first clients, pricing, sell online." },
+      { "name": "Sales", "desc": "Phone prospecting, objection handling, closing, sales team management." }
     ]
   },
   "why": {

@@ -4,7 +4,8 @@ export type Category =
   | "contenu"
   | "ia"
   | "developpement"
-  | "entrepreneuriat";
+  | "entrepreneuriat"
+  | "vente";
 
 export type Level = "debutant" | "intermediaire" | "avance";
 
@@ -32,6 +33,7 @@ export const categoryOrder: Category[] = [
   "ia",
   "developpement",
   "entrepreneuriat",
+  "vente",
 ];
 
 export const categoryLabels: Record<Category, { fr: string; en: string }> = {
@@ -41,6 +43,7 @@ export const categoryLabels: Record<Category, { fr: string; en: string }> = {
   ia: { fr: "Intelligence artificielle", en: "Artificial intelligence" },
   developpement: { fr: "Développement", en: "Development" },
   entrepreneuriat: { fr: "Entrepreneuriat", en: "Entrepreneurship" },
+  vente: { fr: "Vente", en: "Sales" },
 };
 
 export const instructorNames: Record<Instructor, string> = {
@@ -329,6 +332,53 @@ export const courses: Course[] = [
     description: {
       fr: "Structurer une offre claire et la vendre en ligne — de la page de vente au premier encaissement.",
       en: "Structure a clear offer and sell it online — from sales page to first payment.",
+    },
+  },
+
+  // ---------- Vente ----------
+  {
+    slug: "prospection-vente-telephonique",
+    category: "vente",
+    level: "debutant",
+    format: "formation",
+    durationLabel: { fr: "4 h", en: "4 h" },
+    priceUSD: 19,
+    instructor: "abraham",
+    modules: 6,
+    title: { fr: "Prospection & vente téléphonique", en: "Prospecting & phone sales" },
+    description: {
+      fr: "Décrocher des rendez-vous qualifiés par téléphone, sans script robotique — de la prise de contact à la prise de rendez-vous.",
+      en: "Land qualified appointments by phone, without sounding like a robot — from first contact to booked meeting.",
+    },
+  },
+  {
+    slug: "gestion-objections-closing",
+    category: "vente",
+    level: "intermediaire",
+    format: "formation",
+    durationLabel: { fr: "5 h", en: "5 h" },
+    priceUSD: 35,
+    instructor: "abraham",
+    modules: 7,
+    title: { fr: "Gestion des objections & closing", en: "Objection handling & closing" },
+    description: {
+      fr: "Répondre aux objections sans perdre le client, et conclure une vente avec une méthode reproductible, pas de l'improvisation.",
+      en: "Handle objections without losing the client, and close a sale with a repeatable method, not improvisation.",
+    },
+  },
+  {
+    slug: "manager-equipe-commerciale",
+    category: "vente",
+    level: "avance",
+    format: "bootcamp",
+    durationLabel: { fr: "2 jours", en: "2 days" },
+    priceUSD: 129,
+    instructor: "abraham",
+    modules: 10,
+    title: { fr: "Manager une équipe commerciale", en: "Managing a sales team" },
+    description: {
+      fr: "Encadrer et faire progresser une équipe commerciale : fixer des objectifs, coacher sur les appels, lire les indicateurs de performance.",
+      en: "Lead and grow a sales team: set targets, coach on live calls, and read performance indicators.",
     },
   },
 ];

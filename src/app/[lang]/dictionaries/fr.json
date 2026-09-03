@@ -33,7 +33,7 @@
     "ctaPrimary": "Explorer les formations",
     "ctaSecondary": "Former mon équipe",
     "stats": [
-      { "value": "6", "label": "familles de formation" },
+      { "value": "7", "label": "familles de formation" },
       { "value": "3", "label": "niveaux, du débutant au pro" },
       { "value": "9$", "label": "prix d'entrée" },
       { "value": "2", "label": "langues, FR & EN" }
@@ -41,7 +41,7 @@
   },
   "categories": {
     "eyebrow": "Catalogue",
-    "title": "Six familles de compétences, pas un fourre-tout",
+    "title": "Sept familles de compétences, pas un fourre-tout",
     "subtitle": "Chaque formation répond à une seule question : qu'est-ce que vous saurez réellement faire à la fin ?",
     "items": [
       { "name": "Marketing", "desc": "Stratégie, acquisition, SEO, Meta & Google Ads, email marketing, tunnel de conversion." },
@@ -49,7 +49,8 @@
       { "name": "Création de contenu", "desc": "Canva, montage vidéo, photo produit, identité visuelle DIY, site sans code." },
       { "name": "Intelligence artificielle", "desc": "Claude, ChatGPT, automatisation, agents IA — sur des cas d'usage réels." },
       { "name": "Développement", "desc": "AI-assisted coding, APIs, automatisation, SaaS assisté par IA." },
-      { "name": "Entrepreneuriat", "desc": "Créer son offre, trouver ses premiers clients, pricing, vendre en ligne." }
+      { "name": "Entrepreneuriat", "desc": "Créer son offre, trouver ses premiers clients, pricing, vendre en ligne." },
+      { "name": "Vente", "desc": "Prospection téléphonique, gestion des objections, closing, management commercial." }
     ]
   },
   "why": {

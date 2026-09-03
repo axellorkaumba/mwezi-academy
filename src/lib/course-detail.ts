@@ -56,6 +56,14 @@ const learnPools: Record<Category, Bi[]> = {
     t("Reconnaître les signaux qui annoncent un client prêt à acheter", "Recognize the signals that show a client is ready to buy"),
     t("Décider quoi arrêter de faire pour se concentrer sur ce qui vend", "Decide what to stop doing to focus on what actually sells"),
   ],
+  vente: [
+    t("Structurer un script d'appel qui ne sonne pas comme un script", "Structure a call script that doesn't sound scripted"),
+    t("Passer le barrage secrétaire/standard sans perdre patience", "Get past the gatekeeper without losing your patience"),
+    t("Reconnaître et lever les objections les plus courantes", "Recognize and overcome the most common objections"),
+    t("Poser les bonnes questions pour qualifier un prospect en 5 minutes", "Ask the right questions to qualify a prospect in 5 minutes"),
+    t("Coacher un commercial sur un appel qu'il vient de rater", "Coach a rep on a call they just lost"),
+    t("Lire les indicateurs d'une équipe commerciale (conversion, durée d'appel, relances)", "Read a sales team's indicators (conversion, call length, follow-ups)"),
+  ],
 };
 
 const forWhoPools: Record<Category, Bi[]> = {
@@ -95,6 +103,12 @@ const forWhoPools: Record<Category, Bi[]> = {
     t("Professionnels qui envisagent de se lancer à leur compte", "Professionals considering going independent"),
     t("Toute personne qui a une offre mais pas encore de méthode pour la vendre", "Anyone with an offer but no method yet to sell it"),
   ],
+  vente: [
+    t("Commerciaux qui prospectent par téléphone au quotidien", "Sales reps prospecting by phone every day"),
+    t("Entrepreneurs qui doivent vendre eux-mêmes, sans équipe dédiée", "Entrepreneurs who have to sell themselves, without a dedicated team"),
+    t("Team leaders et managers qui encadrent une équipe commerciale", "Team leaders and managers overseeing a sales team"),
+    t("Toute personne qui doit décrocher des rendez-vous ou closer des ventes", "Anyone who needs to book meetings or close sales"),
+  ],
 };
 
 const outcomesPools: Record<Category, Bi[]> = {
@@ -133,6 +147,12 @@ const outcomesPools: Record<Category, Bi[]> = {
     t("Décrocher un premier rendez-vous client qualifié", "Land a first qualified client meeting"),
     t("Fixer un prix défendable pour votre offre", "Set a defensible price for your offer"),
     t("Mettre en ligne une page de vente fonctionnelle", "Publish a working sales page"),
+  ],
+  vente: [
+    t("Mener un appel de prospection de bout en bout", "Run a prospecting call end to end"),
+    t("Répondre aux objections les plus fréquentes sans perdre le client", "Handle the most common objections without losing the client"),
+    t("Fixer des objectifs commerciaux réalistes et les suivre", "Set realistic sales targets and track them"),
+    t("Coacher un commercial sur ses points faibles au téléphone", "Coach a rep on their weak points on the phone"),
   ],
 };
 
@@ -194,6 +214,16 @@ const moduleNamePools: Record<Category, Bi[]> = {
     t("Construire son premier tunnel de vente", "Building your first sales funnel"),
     t("Étude de cas et plan d'action personnel", "Case study and personal action plan"),
   ],
+  vente: [
+    t("Diagnostic : où perdez-vous des ventes aujourd'hui", "Diagnostic: where you're losing sales today"),
+    t("Construire un script d'appel qui reste naturel", "Building a call script that stays natural"),
+    t("Passer les barrages et capter l'attention en 20 secondes", "Getting past gatekeepers and grabbing attention in 20 seconds"),
+    t("Qualifier un prospect : les bonnes questions", "Qualifying a prospect: the right questions"),
+    t("Gérer les objections sans se justifier", "Handling objections without over-justifying"),
+    t("Conclure : demander l'engagement sans forcer", "Closing: asking for commitment without pushing"),
+    t("Coacher une équipe sur ses appels et lire ses indicateurs", "Coaching a team on their calls and reading their indicators"),
+    t("Étude de cas et plan d'action personnel", "Case study and personal action plan"),
+  ],
 };
 
 const projectTemplate: Bi = t(
@@ -229,8 +259,8 @@ function faqFor(level: Level): { q: Bi; a: Bi }[] {
     {
       q: t("Comment se passe le paiement ?", "How does payment work?"),
       a: t(
-        "Par mobile money (Airtel Money, Orange Money, M-Pesa) ou carte bancaire selon votre pays — le paiement à l'international est aussi pris en charge.",
-        "By mobile money (Airtel Money, Orange Money, M-Pesa) or card depending on your country — international payment is also supported."
+        "En espèces, en main propre à un formateur ou référent Mwezi Academy, après votre inscription en ligne. Votre accès à la formation est activé dès réception du paiement.",
+        "In cash, in person to a Mwezi Academy instructor or referent, after you enroll online. Your access to the course is activated once payment is received."
       ),
     },
     {
