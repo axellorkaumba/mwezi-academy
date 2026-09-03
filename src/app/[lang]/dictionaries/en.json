@@ -20,6 +20,18 @@
     "errorInvalidEmail": "Invalid email address.",
     "errorPasswordTooShort": "8 characters minimum."
   },
+  "lesson": {
+    "backToAccount": "← My account",
+    "program": "Program",
+    "projectLabel": "Hands-on project",
+    "markComplete": "Mark complete",
+    "markedComplete": "Completed",
+    "previous": "← Previous",
+    "next": "Next →",
+    "progressLabel": "{done}/{total} modules completed",
+    "comingSoonTitle": "Content coming soon",
+    "comingSoonBody": "The detailed content for this course isn't online yet — it's coming soon. Contact us if you have questions in the meantime."
+  },
   "login": {
     "eyebrow": "Learner area",
     "title": "Log in",
@@ -555,6 +567,7 @@
     "title": "Hi, {name}.",
     "enrolledTitle": "My courses",
     "viewCourse": "View course",
+    "accessCourse": "Access course",
     "noEnrollments": "You don't have any enrollment yet.",
     "browseCatalog": "Browse the catalog",
     "statusPending": "Payment pending",

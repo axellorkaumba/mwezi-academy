@@ -1,4 +1,4 @@
-import { pgTable, text, integer, timestamp, uuid } from "drizzle-orm/pg-core";
+import { pgTable, text, integer, timestamp, uuid, unique } from "drizzle-orm/pg-core";
 
 export const students = pgTable("students", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -24,6 +24,20 @@ export const enrollments = pgTable("enrollments", {
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   validatedAt: timestamp("validated_at", { withTimezone: true }),
 });
+
+export const lessonProgress = pgTable(
+  "lesson_progress",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    studentId: uuid("student_id")
+      .notNull()
+      .references(() => students.id),
+    courseSlug: text("course_slug").notNull(),
+    moduleIndex: integer("module_index").notNull(),
+    completedAt: timestamp("completed_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [unique().on(table.studentId, table.courseSlug, table.moduleIndex)]
+);
 
 export const enterpriseLeads = pgTable("enterprise_leads", {
   id: uuid("id").primaryKey().defaultRandom(),

@@ -20,6 +20,18 @@
     "errorInvalidEmail": "Adresse email invalide.",
     "errorPasswordTooShort": "8 caractères minimum."
   },
+  "lesson": {
+    "backToAccount": "← Mon compte",
+    "program": "Programme",
+    "projectLabel": "Projet pratique",
+    "markComplete": "Marquer terminé",
+    "markedComplete": "Terminé",
+    "previous": "← Précédent",
+    "next": "Suivant →",
+    "progressLabel": "{done}/{total} modules terminés",
+    "comingSoonTitle": "Contenu en préparation",
+    "comingSoonBody": "Le contenu détaillé de cette formation n'est pas encore en ligne — il arrive bientôt. Contactez-nous si vous avez des questions en attendant."
+  },
   "login": {
     "eyebrow": "Espace apprenant",
     "title": "Connexion",
@@ -555,6 +567,7 @@
     "title": "Bonjour, {name}.",
     "enrolledTitle": "Mes formations",
     "viewCourse": "Voir la formation",
+    "accessCourse": "Accéder au cours",
     "noEnrollments": "Vous n'avez pas encore d'inscription.",
     "browseCatalog": "Explorer le catalogue",
     "statusPending": "En attente de paiement",

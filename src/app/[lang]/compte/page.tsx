@@ -101,10 +101,14 @@ export default async function AccountPage({
                       </p>
                     </div>
                     <Link
-                      href={`/${l}/formation/${e.courseSlug}`}
+                      href={
+                        e.status === "paid"
+                          ? `/${l}/formation/${e.courseSlug}/apprendre`
+                          : `/${l}/formation/${e.courseSlug}`
+                      }
                       className="shrink-0 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-ink"
                     >
-                      {a.viewCourse}
+                      {e.status === "paid" ? a.accessCourse : a.viewCourse}
                     </Link>
                   </div>
                 ))}
