@@ -1,7 +1,17 @@
 import { pgTable, text, integer, timestamp, uuid } from "drizzle-orm/pg-core";
 
+export const students = pgTable("students", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  phone: text("phone").notNull().unique(),
+  fullName: text("full_name").notNull(),
+  email: text("email").notNull(),
+  country: text("country").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 export const enrollments = pgTable("enrollments", {
   id: uuid("id").primaryKey().defaultRandom(),
+  studentId: uuid("student_id").references(() => students.id),
   courseSlug: text("course_slug").notNull(),
   courseTitle: text("course_title").notNull(),
   priceUSD: integer("price_usd").notNull(),

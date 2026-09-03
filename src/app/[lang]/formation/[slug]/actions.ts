@@ -5,6 +5,7 @@ import type { EnrollmentState } from "@/lib/enrollment";
 import { getDb } from "@/db";
 import { enrollments } from "@/db/schema";
 import { courses } from "@/lib/courses";
+import { upsertStudent } from "@/lib/students";
 
 const REQUIRED_FIELDS = ["fullName", "email", "phone", "country"] as const;
 
@@ -34,7 +35,15 @@ export async function submitEnrollment(
     return { status: "error", errors };
   }
 
+  const studentId = await upsertStudent({
+    phone: values.phone,
+    fullName: values.fullName,
+    email: values.email,
+    country: values.country,
+  });
+
   await getDb().insert(enrollments).values({
+    studentId,
     courseSlug: course!.slug,
     courseTitle: course!.title.fr,
     priceUSD: course!.priceUSD,
