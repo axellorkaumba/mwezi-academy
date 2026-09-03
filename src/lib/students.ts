@@ -1,28 +1,32 @@
+import bcrypt from "bcryptjs";
 import { getDb } from "@/db";
 import { students } from "@/db/schema";
-import { normalizePhone } from "@/lib/phone";
 
 export async function upsertStudent(input: {
-  phone: string;
-  fullName: string;
   email: string;
+  password: string;
+  fullName: string;
+  phone: string;
   country: string;
 }) {
-  const phone = normalizePhone(input.phone);
+  const passwordHash = await bcrypt.hash(input.password, 10);
 
   const [student] = await getDb()
     .insert(students)
     .values({
-      phone,
-      fullName: input.fullName,
       email: input.email,
+      passwordHash,
+      fullName: input.fullName,
+      phone: input.phone,
       country: input.country,
     })
     .onConflictDoUpdate({
-      target: students.phone,
+      target: students.email,
+      // Deliberately not touching passwordHash here: a repeat enrollment
+      // shouldn't silently overwrite an existing account's password.
       set: {
         fullName: input.fullName,
-        email: input.email,
+        phone: input.phone,
         country: input.country,
       },
     })

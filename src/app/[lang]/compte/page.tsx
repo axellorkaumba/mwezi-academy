@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { cookies } from "next/headers";
+import { redirect, notFound } from "next/navigation";
+import { desc, eq } from "drizzle-orm";
 import { hasLocale, getDictionary, type Locale } from "../dictionaries";
-import { notFound } from "next/navigation";
-import { courses } from "@/lib/courses";
+import { getDb } from "@/db";
+import { students, enrollments } from "@/db/schema";
+import { COOKIE_NAME, verifyStudentSessionToken } from "@/lib/student-auth";
+import { logout } from "./actions";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -26,98 +33,98 @@ export default async function AccountPage({
   const dict = await getDictionary(l);
   const a = dict.account;
 
-  const enrolled = a.sampleEnrolled
-    .map((e) => ({ ...e, course: courses.find((c) => c.slug === e.slug) }))
-    .filter((e) => e.course);
+  const token = (await cookies()).get(COOKIE_NAME)?.value;
+  const studentId = await verifyStudentSessionToken(token);
+  if (!studentId) redirect(`/${l}/connexion`);
+
+  const [student] = await getDb().select().from(students).where(eq(students.id, studentId));
+  if (!student) redirect(`/${l}/connexion`);
+
+  const myEnrollments = await getDb()
+    .select()
+    .from(enrollments)
+    .where(eq(enrollments.studentId, studentId))
+    .orderBy(desc(enrollments.createdAt));
+
+  const statusLabel: Record<string, string> = {
+    pending: a.statusPending,
+    paid: a.statusPaid,
+    cancelled: a.statusCancelled,
+  };
 
   return (
     <div className="mx-auto max-w-4xl px-5 sm:px-8 py-12 sm:py-16">
-      {/* Preview banner */}
-      <div className="mb-10 rounded-xl border border-dashed border-ember/50 bg-ember/5 px-5 py-4 text-sm text-ink-muted">
-        {a.previewBanner}
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <span className="font-mono text-[11px] uppercase tracking-wider text-ember-strong">
+            {a.eyebrow}
+          </span>
+          <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl">
+            {a.title.replace("{name}", student.fullName)}
+          </h1>
+        </div>
+        <form action={logout.bind(null, l)}>
+          <button
+            type="submit"
+            className="shrink-0 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-ink"
+          >
+            {a.logout}
+          </button>
+        </form>
       </div>
-
-      <span className="font-mono text-[11px] uppercase tracking-wider text-ember-strong">
-        {a.eyebrow}
-      </span>
-      <h1 className="mt-2 font-display text-3xl font-semibold sm:text-4xl">{a.title}</h1>
 
       <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          {/* Enrolled courses */}
           <section>
             <h2 className="font-display text-lg font-semibold">{a.enrolledTitle}</h2>
-            <div className="mt-4 flex flex-col gap-3">
-              {enrolled.map(({ course, progress }) => (
-                <div
-                  key={course!.slug}
-                  className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-5 sm:flex-row sm:items-center sm:justify-between"
+            {myEnrollments.length === 0 ? (
+              <div className="mt-4 rounded-2xl border border-border bg-surface p-6 text-sm text-ink-muted">
+                <p>{a.noEnrollments}</p>
+                <Link
+                  href={`/${l}/formations`}
+                  className="mt-3 inline-block text-sm font-semibold text-ember-strong hover:underline"
                 >
-                  <div className="min-w-0">
-                    <p className="font-display font-semibold">{course!.title[l]}</p>
-                    <div className="mt-2 flex items-center gap-2">
-                      <div className="h-1.5 w-40 overflow-hidden rounded-full bg-surface-2">
-                        <div
-                          className="h-full rounded-full bg-ember"
-                          style={{ width: `${progress}%` }}
-                        />
-                      </div>
-                      <span className="font-mono text-xs text-ink-muted">{progress}%</span>
-                    </div>
-                  </div>
-                  <Link
-                    href={`/${l}/formation/${course!.slug}`}
-                    className="shrink-0 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-ink"
+                  {a.browseCatalog} →
+                </Link>
+              </div>
+            ) : (
+              <div className="mt-4 flex flex-col gap-3">
+                {myEnrollments.map((e) => (
+                  <div
+                    key={e.id}
+                    className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-5 sm:flex-row sm:items-center sm:justify-between"
                   >
-                    {a.continueLabel}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Purchases */}
-          <section className="mt-12">
-            <h2 className="font-display text-lg font-semibold">{a.purchasesTitle}</h2>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface">
-              <table className="w-full text-sm">
-                <tbody className="divide-y divide-border">
-                  {enrolled.map(({ course }) => (
-                    <tr key={course!.slug}>
-                      <td className="px-5 py-3">{course!.title[l]}</td>
-                      <td className="px-5 py-3 text-right font-mono tabular-nums text-ink-muted">
-                        ${course!.priceUSD}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                    <div className="min-w-0">
+                      <p className="font-display font-semibold">{e.courseTitle}</p>
+                      <p className="mt-1 font-mono text-xs text-ink-muted">
+                        {statusLabel[e.status] ?? e.status} · ${e.priceUSD}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/${l}/formation/${e.courseSlug}`}
+                      className="shrink-0 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-ink"
+                    >
+                      {a.viewCourse}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
         </div>
 
-        <div className="flex flex-col gap-8">
-          {/* Certificates */}
-          <section>
-            <h2 className="font-display text-lg font-semibold">{a.certificatesTitle}</h2>
-            <div className="mt-4 rounded-2xl border border-border bg-surface p-5">
-              <p className="font-medium">{enrolled[2]?.course?.title[l]}</p>
-              <p className="mt-1 font-mono text-xs text-ink-muted">MWA-2026-000123</p>
-              <p className="mt-2 text-xs text-ink-muted">{a.certificateExample}</p>
-              <span className="mt-3 inline-block rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-ink-muted">
-                {a.certificateVerify}
-              </span>
-            </div>
-          </section>
-
-          {/* Profile */}
+        <div>
           <section>
             <h2 className="font-display text-lg font-semibold">{a.profileTitle}</h2>
             <dl className="mt-4 flex flex-col gap-3 rounded-2xl border border-border bg-surface p-5 text-sm">
-              <Row label={a.profileFields.name} value="Amina Tshimanga" />
-              <Row label={a.profileFields.email} value="amina@example.com" />
-              <Row label={a.profileFields.language} value={l === "fr" ? "Français" : "English"} />
-              <Row label={a.profileFields.memberSince} value="Janvier 2026" />
+              <Row label={a.profileFields.name} value={student.fullName} />
+              <Row label={a.profileFields.email} value={student.email} />
+              <Row label={a.profileFields.phone} value={student.phone} />
+              <Row label={a.profileFields.country} value={student.country} />
+              <Row
+                label={a.profileFields.memberSince}
+                value={new Date(student.createdAt).toLocaleDateString(l === "fr" ? "fr-FR" : "en-US")}
+              />
             </dl>
           </section>
         </div>

@@ -42,6 +42,12 @@ export function SiteHeader({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
         <div className="hidden lg:flex items-center gap-3">
           <Link
+            href={`/${lang}/compte`}
+            className="font-mono text-xs tracking-wide text-ink-muted hover:text-ink transition-colors"
+          >
+            {dict.nav.account}
+          </Link>
+          <Link
             href={otherHref}
             className="font-mono text-xs tracking-wide text-ink-muted hover:text-ink transition-colors"
           >
@@ -85,6 +91,13 @@ export function SiteHeader({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               {l.label}
             </Link>
           ))}
+          <Link
+            href={`/${lang}/compte`}
+            onClick={() => setOpen(false)}
+            className="rounded-md px-3 py-2.5 text-sm font-medium text-ink hover:bg-surface-2"
+          >
+            {dict.nav.account}
+          </Link>
           <div className="mt-2 flex items-center justify-between px-3">
             <Link href={otherHref} className="font-mono text-xs text-ink-muted">
               {lang === "fr" ? "Switch to EN" : "Passer en FR"}

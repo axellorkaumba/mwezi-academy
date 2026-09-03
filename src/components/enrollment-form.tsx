@@ -21,6 +21,9 @@ export function EnrollmentForm({
   const errorText = (code?: string) =>
     code === "invalid" ? f.errorInvalidEmail : code === "required" ? f.errorRequired : undefined;
 
+  const passwordErrorText = (code?: string) =>
+    code === "invalid" ? f.errorPasswordTooShort : code === "required" ? f.errorRequired : undefined;
+
   if (state.status === "success") {
     return (
       <div className="rounded-2xl border border-teal/30 bg-teal/5 p-8 text-center">
@@ -43,6 +46,15 @@ export function EnrollmentForm({
         <Field label={f.phone} name="phone" type="tel" error={errorText(state.errors.phone)} required />
         <Field label={f.country} name="country" error={errorText(state.errors.country)} required />
       </div>
+
+      <Field
+        label={f.password}
+        name="password"
+        type="password"
+        error={passwordErrorText(state.errors.password)}
+        required
+      />
+      <p className="-mt-3 text-xs text-ink-muted">{f.passwordHint}</p>
 
       <button
         type="submit"

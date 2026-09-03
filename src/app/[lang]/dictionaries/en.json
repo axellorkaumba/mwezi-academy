@@ -5,17 +5,30 @@
   },
   "enroll": {
     "title": "Finish your enrollment",
-    "subtitle": "Fill in your details — you'll then receive the cash payment instructions.",
+    "subtitle": "Fill in your details and set a password — you'll then receive the cash payment instructions.",
     "fullName": "Full name",
     "email": "Email",
     "phone": "Phone",
     "country": "Country",
+    "password": "Password",
+    "passwordHint": "8 characters minimum — used to log into your learner account.",
     "submit": "Confirm enrollment",
     "submitting": "Sending…",
     "successTitle": "Enrollment recorded.",
     "successBody": "Payment of ${amount} is made in cash, in person to a Mwezi Academy instructor or referent — you'll be contacted by email or phone to arrange the details. Your access to the course will be activated once payment is received.",
     "errorRequired": "This field is required.",
-    "errorInvalidEmail": "Invalid email address."
+    "errorInvalidEmail": "Invalid email address.",
+    "errorPasswordTooShort": "8 characters minimum."
+  },
+  "login": {
+    "eyebrow": "Learner area",
+    "title": "Log in",
+    "subtitle": "Access your courses with the email and password you used when enrolling.",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Log in",
+    "submitting": "Logging in…",
+    "errorInvalid": "Incorrect email or password."
   },
   "nav": {
     "formations": "Courses",
@@ -24,7 +37,8 @@
     "formateurs": "Instructors",
     "ressources": "Resources",
     "apropos": "About",
-    "cta": "Browse courses"
+    "cta": "Browse courses",
+    "account": "My account"
   },
   "hero": {
     "eyebrow": "Professional training — Marketing · Digital · AI",
@@ -537,24 +551,18 @@
     "ctaSecondary": "Meet the instructors"
   },
   "account": {
-    "eyebrow": "Student area",
-    "title": "Hi, Amina.",
-    "previewBanner": "Student area preview — sample data. Real login, purchases and progress require authentication and a database, to be provisioned before launch.",
+    "eyebrow": "Learner area",
+    "title": "Hi, {name}.",
     "enrolledTitle": "My courses",
-    "progressLabel": "Progress",
-    "continueLabel": "Continue",
-    "certificatesTitle": "My certificates",
-    "certificateVerify": "Verify",
-    "certificateExample": "Example — certificate not issued",
+    "viewCourse": "View course",
+    "noEnrollments": "You don't have any enrollment yet.",
+    "browseCatalog": "Browse the catalog",
+    "statusPending": "Payment pending",
+    "statusPaid": "Access active",
+    "statusCancelled": "Cancelled",
     "profileTitle": "Profile",
-    "profileFields": { "name": "Name", "email": "Email", "language": "Preferred language", "memberSince": "Member since" },
-    "purchasesTitle": "Purchase history",
-    "purchasesEmpty": "No purchases yet — example below.",
-    "sampleEnrolled": [
-      { "slug": "chatgpt-claude-entrepreneurs", "progress": 80 },
-      { "slug": "meta-ads-premiere-campagne", "progress": 45 },
-      { "slug": "canva-pour-entrepreneurs", "progress": 100 }
-    ]
+    "profileFields": { "name": "Name", "email": "Email", "phone": "Phone", "country": "Country", "memberSince": "Member since" },
+    "logout": "Log out"
   },
   "resources": {
     "eyebrow": "Resources",

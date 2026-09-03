@@ -2,9 +2,10 @@ import { pgTable, text, integer, timestamp, uuid } from "drizzle-orm/pg-core";
 
 export const students = pgTable("students", {
   id: uuid("id").primaryKey().defaultRandom(),
-  phone: text("phone").notNull().unique(),
+  email: text("email").notNull().unique(),
+  passwordHash: text("password_hash").notNull(),
   fullName: text("full_name").notNull(),
-  email: text("email").notNull(),
+  phone: text("phone").notNull(),
   country: text("country").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });

@@ -5,17 +5,30 @@
   },
   "enroll": {
     "title": "Finaliser votre inscription",
-    "subtitle": "Remplissez vos informations — vous recevrez ensuite les modalités de paiement en espèces.",
+    "subtitle": "Remplissez vos informations et créez un mot de passe — vous recevrez ensuite les modalités de paiement en espèces.",
     "fullName": "Nom complet",
     "email": "Email",
     "phone": "Téléphone",
     "country": "Pays",
+    "password": "Mot de passe",
+    "passwordHint": "8 caractères minimum — utilisé pour vous connecter à votre espace apprenant.",
     "submit": "Confirmer l'inscription",
     "submitting": "Envoi…",
     "successTitle": "Inscription enregistrée.",
     "successBody": "Le paiement de ${amount} se fait en espèces, en main propre à un formateur ou référent Mwezi Academy — vous serez recontacté par email ou téléphone pour convenir des modalités. Votre accès à la formation sera activé dès la réception du paiement.",
     "errorRequired": "Ce champ est requis.",
-    "errorInvalidEmail": "Adresse email invalide."
+    "errorInvalidEmail": "Adresse email invalide.",
+    "errorPasswordTooShort": "8 caractères minimum."
+  },
+  "login": {
+    "eyebrow": "Espace apprenant",
+    "title": "Connexion",
+    "subtitle": "Accédez à vos formations avec l'email et le mot de passe utilisés à l'inscription.",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submit": "Se connecter",
+    "submitting": "Connexion…",
+    "errorInvalid": "Email ou mot de passe incorrect."
   },
   "nav": {
     "formations": "Formations",
@@ -24,7 +37,8 @@
     "formateurs": "Formateurs",
     "ressources": "Ressources",
     "apropos": "À propos",
-    "cta": "Explorer les formations"
+    "cta": "Explorer les formations",
+    "account": "Mon compte"
   },
   "hero": {
     "eyebrow": "Formation professionnelle — Marketing · Digital · IA",
@@ -537,24 +551,18 @@
     "ctaSecondary": "Voir les formateurs"
   },
   "account": {
-    "eyebrow": "Espace étudiant",
-    "title": "Bonjour, Amina.",
-    "previewBanner": "Aperçu de l'espace étudiant — données d'exemple. La connexion, les achats et la progression réelle nécessitent l'authentification et une base de données, à provisionner avant le lancement.",
+    "eyebrow": "Espace apprenant",
+    "title": "Bonjour, {name}.",
     "enrolledTitle": "Mes formations",
-    "progressLabel": "Progression",
-    "continueLabel": "Continuer",
-    "certificatesTitle": "Mes certificats",
-    "certificateVerify": "Vérifier",
-    "certificateExample": "Exemple — certificat non délivré",
+    "viewCourse": "Voir la formation",
+    "noEnrollments": "Vous n'avez pas encore d'inscription.",
+    "browseCatalog": "Explorer le catalogue",
+    "statusPending": "En attente de paiement",
+    "statusPaid": "Accès actif",
+    "statusCancelled": "Annulé",
     "profileTitle": "Profil",
-    "profileFields": { "name": "Nom", "email": "Email", "language": "Langue préférée", "memberSince": "Membre depuis" },
-    "purchasesTitle": "Historique d'achats",
-    "purchasesEmpty": "Aucun achat pour l'instant — exemple ci-dessous.",
-    "sampleEnrolled": [
-      { "slug": "chatgpt-claude-entrepreneurs", "progress": 80 },
-      { "slug": "meta-ads-premiere-campagne", "progress": 45 },
-      { "slug": "canva-pour-entrepreneurs", "progress": 100 }
-    ]
+    "profileFields": { "name": "Nom", "email": "Email", "phone": "Téléphone", "country": "Pays", "memberSince": "Membre depuis" },
+    "logout": "Se déconnecter"
   },
   "resources": {
     "eyebrow": "Ressources",

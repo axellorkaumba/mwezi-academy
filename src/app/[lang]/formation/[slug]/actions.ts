@@ -7,7 +7,7 @@ import { enrollments } from "@/db/schema";
 import { courses } from "@/lib/courses";
 import { upsertStudent } from "@/lib/students";
 
-const REQUIRED_FIELDS = ["fullName", "email", "phone", "country"] as const;
+const REQUIRED_FIELDS = ["fullName", "email", "phone", "country", "password"] as const;
 
 export async function submitEnrollment(
   _prevState: EnrollmentState,
@@ -27,6 +27,9 @@ export async function submitEnrollment(
   if (values.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
     errors.email = "invalid";
   }
+  if (values.password && values.password.length < 8) {
+    errors.password = "invalid";
+  }
 
   const course = courses.find((c) => c.slug === values.courseSlug);
   if (!course) errors.courseSlug = "required";
@@ -36,9 +39,10 @@ export async function submitEnrollment(
   }
 
   const studentId = await upsertStudent({
-    phone: values.phone,
-    fullName: values.fullName,
     email: values.email,
+    password: values.password,
+    fullName: values.fullName,
+    phone: values.phone,
     country: values.country,
   });
 
